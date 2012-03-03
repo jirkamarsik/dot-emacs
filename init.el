@@ -24,9 +24,7 @@
                       paredit
                       magit
                       clojure-mode
-                      clojure-test-mode
-                      clojurescript-mode
-                      slime)
+                      clojurescript-mode)
   "A list of packages to ensure are installed at launch.")
 
 (dolist (p my-packages)
