@@ -24,7 +24,9 @@
                       paredit
                       magit
                       clojure-mode
-                      clojurescript-mode)
+                      clojurescript-mode
+                      rainbow-delimiters
+                      haskell-mode)
   "A list of packages to ensure are installed at launch.")
 
 (dolist (p my-packages)

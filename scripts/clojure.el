@@ -17,7 +17,8 @@
                (defun clojure-mode-slime-font-lock ()
                  (font-lock-mode nil)
                  (clojure-mode-font-lock-setup)
-                 (font-lock-mode t)))))
+                 (font-lock-mode t)))
+     (add-hook 'slime-repl-mode-hook 'esk-prog-mode-hook)))
 
 
 ;; Teach Emacs to treat hyphen-separated-words as one in Clojure.

@@ -7,3 +7,6 @@
 
 (load "cosmetics")
 (load "clojure")
+(load "rainbow")
+(load "haskell")
+(load "fsharp")
