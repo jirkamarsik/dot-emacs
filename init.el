@@ -31,4 +31,5 @@
   (when (not (package-installed-p p))
     (package-install p)))
 
+(add-to-list 'load-path "~/.emacs.d/scripts")
 (load "setup")
