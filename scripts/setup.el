@@ -10,3 +10,4 @@
 (load "rainbow")
 (load "haskell")
 (load "fsharp")
+(load "elisp")
