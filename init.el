@@ -4,11 +4,20 @@
              '("melpa" . "http://melpa.milkbox.net/packages/") t)
 (package-initialize)
 
-;; Making sure my packages are installed
+;; Work around MELPA server issues
+(setq url-http-attempt-keepalives nil)
+
+;; Refreshing the MELPA repo
 (when (not package-archive-contents)
   (package-refresh-contents))
 
-(defvar my-packages '(melpa)
+;; Making sure melpa.el is around for the other installations
+(unless (require 'melpa nil t)
+  (package-install 'melpa)
+  (require 'melpa))
+
+;; Making sure my packages are installed
+(defvar my-packages '()
   "A list of packages to ensure are installed at launch.")
 
 (dolist (p my-packages)
