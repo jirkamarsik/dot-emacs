@@ -17,7 +17,10 @@
   (require 'melpa))
 
 ;; Making sure my packages are installed
-(defvar my-packages '()
+(defvar my-packages '(starter-kit
+                      starter-kit-bindings
+                      starter-kit-lisp
+                      starter-kit-eshell)
   "A list of packages to ensure are installed at launch.")
 
 (dolist (p my-packages)
