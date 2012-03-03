@@ -20,10 +20,15 @@
 (defvar my-packages '(starter-kit
                       starter-kit-bindings
                       starter-kit-lisp
-                      starter-kit-eshell)
+                      starter-kit-eshell
+                      paredit
+                      magit
+                      clojure-mode
+                      clojure-test-mode
+                      clojurescript-mode
+                      slime)
   "A list of packages to ensure are installed at launch.")
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
     (package-install p)))
-
