@@ -2,4 +2,5 @@ elpa
 auto-save-list
 backups
 places
+swank
 .smex-items
