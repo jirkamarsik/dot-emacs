@@ -13,12 +13,12 @@
                                        (modify-syntax-entry ?\} "){")
                                        (modify-syntax-entry ?\[ "(]")
                                        (modify-syntax-entry ?\] ")[")))
+     (add-hook 'slime-repl-mode-hook 'esk-prog-mode-hook)
      (add-hook 'slime-repl-mode-hook
                (defun clojure-mode-slime-font-lock ()
                  (font-lock-mode nil)
                  (clojure-mode-font-lock-setup)
-                 (font-lock-mode t)))
-     (add-hook 'slime-repl-mode-hook 'esk-prog-mode-hook)))
+                 (font-lock-mode t)))))
 
 
 ;; Teach Emacs to treat hyphen-separated-words as one in Clojure.
