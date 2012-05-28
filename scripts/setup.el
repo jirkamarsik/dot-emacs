@@ -11,3 +11,4 @@
 (load "haskell")
 (load "fsharp")
 (load "elisp")
+(load "tramp")
