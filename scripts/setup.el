@@ -12,3 +12,4 @@
 (load "fsharp")
 (load "elisp")
 (load "tramp-conf")
+(load "paredit-conf")
