@@ -1,24 +1,26 @@
 ;; Introducing Clojure to the SLIME REPL (from live-coding-emacs).
 (eval-after-load 'slime
-  '(progn
-     (add-hook 'slime-repl-mode-hook 'enable-paredit-mode)
-     (add-hook 'slime-repl-mode-hook (lambda ()
-                                       (define-key slime-repl-mode-map
-                                         (kbd "DEL") 'paredit-backward-delete)
-                                       (define-key slime-repl-mode-map
-                                         (kbd "{") 'paredit-open-curly)
-                                       (define-key slime-repl-mode-map
-                                         (kbd "}") 'paredit-close-curly)
-                                       (modify-syntax-entry ?\{ "(}")
-                                       (modify-syntax-entry ?\} "){")
-                                       (modify-syntax-entry ?\[ "(]")
-                                       (modify-syntax-entry ?\] ")[")))
-     (add-hook 'slime-repl-mode-hook 'esk-prog-mode-hook)
-     (add-hook 'slime-repl-mode-hook
-               (defun clojure-mode-slime-font-lock ()
+  '(add-hook 'slime-repl-mode-hook
+             (lambda ()
+               (when (equalp (buffer-name) "*slime-repl clojure*")
                  (font-lock-mode nil)
                  (clojure-mode-font-lock-setup)
-                 (font-lock-mode t)))))
+                 (font-lock-mode t)
+
+                 (esk-prog-mode-hook)
+                 
+                 (define-key slime-repl-mode-map
+                   (kbd "DEL") 'paredit-backward-delete)
+                 (define-key slime-repl-mode-map
+                   (kbd "{") 'paredit-open-curly)
+                 (define-key slime-repl-mode-map
+                   (kbd "}") 'paredit-close-curly)
+                 (modify-syntax-entry ?\{ "(}")
+                 (modify-syntax-entry ?\} "){")
+                 (modify-syntax-entry ?\[ "(]")
+                 (modify-syntax-entry ?\] ")[")
+
+                 (enable-paredit-mode)))))
 
 
 ;; Teach Emacs to treat hyphen-separated-words as one in Clojure.

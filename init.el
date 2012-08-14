@@ -26,7 +26,8 @@
                       clojure-mode
                       clojurescript-mode
                       rainbow-delimiters
-                      haskell-mode)
+                      haskell-mode
+                      js2-mode)
   "A list of packages to ensure are installed at launch.")
 
 (dolist (p my-packages)

@@ -13,3 +13,4 @@
 (load "elisp")
 (load "tramp-conf")
 (load "paredit-conf")
+(load "javascript")
