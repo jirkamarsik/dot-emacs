@@ -5,3 +5,5 @@ places
 swank
 .smex-items
 eshell
+tramp
+session.*
