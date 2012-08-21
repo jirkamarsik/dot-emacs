@@ -28,7 +28,8 @@
                       rainbow-delimiters
                       haskell-mode
                       js2-mode
-                      coffee-mode)
+                      coffee-mode
+                      minimap)
   "A list of packages to ensure are installed at launch.")
 
 (dolist (p my-packages)
