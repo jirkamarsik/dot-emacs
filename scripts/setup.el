@@ -15,3 +15,4 @@
 (load "paredit-conf")
 (load "javascript")
 (load "coffeescript")
+(load "markdown-conf")

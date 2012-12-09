@@ -24,12 +24,15 @@
                       paredit
                       magit
                       clojure-mode
+                      clojure-test-mode
                       clojurescript-mode
+                      nrepl
                       rainbow-delimiters
                       haskell-mode
                       js2-mode
                       coffee-mode
-                      minimap)
+                      minimap
+                      markdown-mode)
   "A list of packages to ensure are installed at launch.")
 
 (dolist (p my-packages)
