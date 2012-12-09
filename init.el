@@ -32,7 +32,8 @@
                       js2-mode
                       coffee-mode
                       minimap
-                      markdown-mode)
+                      markdown-mode
+                      yaml-mode)
   "A list of packages to ensure are installed at launch.")
 
 (dolist (p my-packages)
