@@ -16,3 +16,4 @@
 (load "javascript")
 (load "coffeescript")
 (load "markdown-conf")
+(load "acg-conf")
