@@ -17,3 +17,4 @@
 (load "coffeescript")
 (load "markdown-conf")
 (load "acg-conf")
+(load "lexicomp-conf")
