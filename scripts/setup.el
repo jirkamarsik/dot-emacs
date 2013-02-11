@@ -18,3 +18,4 @@
 (load "markdown-conf")
 (load "acg-conf")
 (load "lexicomp-conf")
+(load "xmg.el")
