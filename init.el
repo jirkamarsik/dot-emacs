@@ -1,7 +1,9 @@
-;; Registering MELPA as the archive repo
+;; Registering MELPA (and Marmalade) as the archive repos
 (require 'package)
 (add-to-list 'package-archives
              '("melpa" . "http://melpa.milkbox.net/packages/") t)
+(add-to-list 'package-archives
+             '("marmalade" . "http://marmalade-repo.org/packages/") t)
 (package-initialize)
 
 ;; Work around MELPA server issues
@@ -36,6 +38,12 @@
                       markdown-mode
                       yaml-mode)
   "A list of packages to ensure are installed at launch.")
+
+(setq package-archive-exclude-alist '(("melpa" . (clojure-mode
+                                                  clojure-test-mode
+                                                  clojurescript-mode
+                                                  nrepl
+                                                  nrepl-ritz))))
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
