@@ -27,6 +27,7 @@
                       clojure-test-mode
                       clojurescript-mode
                       nrepl
+                      nrepl-ritz
                       rainbow-delimiters
                       haskell-mode
                       js2-mode
