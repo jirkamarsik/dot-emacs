@@ -19,3 +19,4 @@
 (load "acg-conf")
 (load "lexicomp-conf")
 (load "xmg.el")
+(load "git-gutter-conf.el")

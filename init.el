@@ -36,7 +36,8 @@
                       coffee-mode
                       minimap
                       markdown-mode
-                      yaml-mode)
+                      yaml-mode
+                      git-gutter)
   "A list of packages to ensure are installed at launch.")
 
 (setq package-archive-exclude-alist '(("melpa" . (clojure-mode
